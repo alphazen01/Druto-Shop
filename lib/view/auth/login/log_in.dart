@@ -76,7 +76,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomText(
-                          title: "Login",
+                          title: "LOGIN",
                           fontSize: 26,
                           fontWeight: FontWeight.w700,
                           color: Colors.black),
