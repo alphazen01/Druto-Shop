@@ -18,6 +18,14 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
+
+
+TextEditingController passwordController = new TextEditingController();
+    TextEditingController emailController = new TextEditingController();
+
+
+
+
   bool isTap = true;
 
   @override
@@ -98,6 +106,8 @@ class _LogInScreenState extends State<LogInScreen> {
                         ],
                       ),
                       CustomTextfield(
+                        controller: emailController,
+                        readOnly: false,
                         obscureText: false,
                       ),
                       SizedBox(
@@ -118,6 +128,8 @@ class _LogInScreenState extends State<LogInScreen> {
                         ],
                       ),
                       CustomTextfield(
+                        controller: passwordController,
+                        readOnly: false,
                         obscureText: true,
                       ),
                       SizedBox(

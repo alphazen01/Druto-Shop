@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class PTheme {
 
-static const paddingX = 15.0;
+static const paddingX = 20.0;
 static const paddingy = 20.0;
 
 

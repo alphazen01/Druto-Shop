@@ -16,133 +16,152 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
 
- bool isTap = true;
+   TextEditingController nameController = new TextEditingController();
+   TextEditingController phoneController = new TextEditingController();
+   TextEditingController emailController = new TextEditingController();
+   TextEditingController passwordController = new TextEditingController();
+    TextEditingController confirmPaswordController = new TextEditingController();
+
+
+
+
+
+  bool isTap = true;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: PTheme.paddingX),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 20,),
-                CustomText(
-                title: "SIGNUP",
-                fontSize: 26,
-                fontWeight: FontWeight.w700,
-                color: Colors.black),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
-              children: [
-                CustomText(
-                    title: "Name",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black),
-                CustomText(
-                    title: "*",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.red),
-              ],
-            ),
-            CustomTextfield(
-              obscureText: false,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-             
-            Row(
-              children: [
-                CustomText(
-                    title: "Phone Number",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black),
-                CustomText(
-                    title: "*",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.red),
-              ],
-            ),
-            CustomTextfield(
-              obscureText: false,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-             
-            Row(
-              children: [
-                CustomText(
-                    title: "Email",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black),
-                CustomText(
-                    title: "*",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.red),
-              ],
-            ),
-            CustomTextfield(
-              obscureText: false,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-             
-            Row(
-              children: [
-                CustomText(
-                    title: "Password",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black),
-                CustomText(
-                    title: "*",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.red),
-              ],
-            ),
-            CustomTextfield(
-              obscureText: true,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: [
-                CustomText(
-                    title: "Confirm Password",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black),
-                CustomText(
-                    title: "*",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.red),
-              ],
-            ),
-            CustomTextfield(
-              obscureText: true,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-             Row(
-               children: [
-                 ClipOval(
+        child: Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: PTheme.paddingX),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              CustomText(
+                  title: "SIGNUP",
+                  fontSize: 26,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: [
+                  CustomText(
+                      title: "Name",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                  CustomText(
+                      title: "*",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.red),
+                ],
+              ),
+              CustomTextfield(
+                controller:nameController ,
+                readOnly: false,
+                obscureText: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  CustomText(
+                      title: "Phone Number",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                  CustomText(
+                      title: "*",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.red),
+                ],
+              ),
+              CustomTextfield(
+                controller: passwordController,
+                readOnly: false,
+                obscureText: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  CustomText(
+                      title: "Email",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                  CustomText(
+                      title: "*",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.red),
+                ],
+              ),
+              CustomTextfield(
+                controller: emailController,
+                readOnly: false,
+                obscureText: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  CustomText(
+                      title: "Password",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                  CustomText(
+                      title: "*",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.red),
+                ],
+              ),
+              CustomTextfield(
+                controller: passwordController,
+                readOnly: false,
+                obscureText: true,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  CustomText(
+                      title: "Confirm Password",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                  CustomText(
+                      title: "*",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.red),
+                ],
+              ),
+              CustomTextfield(
+                controller: confirmPaswordController,
+                readOnly: false,
+                obscureText: true,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  ClipOval(
                     child: Material(
                       child: IconButton(
                         onPressed: () {
@@ -162,32 +181,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                   ),
-                 CustomText(
-                  title: "Remember me",
-                  fontSize: 16,
-                  fontWeight: FontWeight.w300,
-                  color: Colors.black
-                  ),
-               ],
-             ),
-             SizedBox(height: 40,),
+                  CustomText(
+                      title: "Remember me",
+                      fontSize: 16,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.black),
+                ],
+              ),
               SizedBox(
-            width: MediaQuery.of(context).size.width / 3.5,
-            height: 30,
-            child: CustomButton(
-              title: "SUBMIT",
-              color: PTheme.buttonPrimary,
-              onTap: () {},
-              radius: PTheme.buttonShape,
-              primary: PTheme.buttonTextBlack,
-            ),
-          ),
-            
-              ],
-            ),
+                height: 40,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 3.5,
+                height: 30,
+                child: CustomButton(
+                  title: "SUBMIT",
+                  color: PTheme.buttonPrimary,
+                  onTap: () {},
+                  radius: PTheme.buttonShape,
+                  primary: PTheme.buttonTextBlack,
+                ),
+              ),
+            ],
           ),
         ),
-      )
-    );
+      ),
+    ));
   }
 }

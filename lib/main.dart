@@ -1,4 +1,6 @@
 import 'package:druto/view/auth/login/log_in.dart';
+import 'package:druto/view/auth/profile/leave_message.dart';
+import 'package:druto/view/auth/profile/profile_screen.dart';
 import 'package:druto/view/auth/signup/sign_up.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: SignUpScreen() 
+      home: LeaveMessageScreen() 
     );
   }
 }
