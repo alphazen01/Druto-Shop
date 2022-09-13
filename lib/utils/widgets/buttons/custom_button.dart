@@ -1,4 +1,4 @@
-import 'package:druto/utils/widgets/custom_text.dart';
+
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {

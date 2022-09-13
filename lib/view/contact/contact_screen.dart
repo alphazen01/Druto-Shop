@@ -1,20 +1,19 @@
 import 'package:druto/utils/constant/theme.dart';
 import 'package:druto/utils/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 import '../../../utils/widgets/buttons/custom_button.dart';
 import '../../../utils/widgets/custom_textfield.dart';
 
-class LeaveMessageScreen extends StatefulWidget {
-  const LeaveMessageScreen({Key? key}) : super(key: key);
+class ContactUsScreen extends StatefulWidget {
+  const ContactUsScreen({Key? key}) : super(key: key);
 
   @override
-  State<LeaveMessageScreen> createState() => _LeaveMessageScreenState();
+  State<ContactUsScreen> createState() => _ContactUsScreenState();
 }
 
-class _LeaveMessageScreenState extends State<LeaveMessageScreen> {
+class _ContactUsScreenState extends State<ContactUsScreen> {
 
 TextEditingController nameController = new TextEditingController();
 TextEditingController emailController = new TextEditingController();
