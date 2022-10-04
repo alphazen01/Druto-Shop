@@ -1,11 +1,13 @@
-import 'package:druto/utils/constant/theme.dart';
-import 'package:druto/utils/widgets/buttons/custom_button.dart';
 
+
+import 'package:druto/view/auth/signup/sign_up.dart';
 import 'package:flutter/material.dart';
 
 
 import '../../../utils/constant/function/method_divider.dart';
 import '../../../utils/constant/function/sign_after_before.dart';
+import '../../../utils/constant/theme.dart';
+import '../../../utils/widgets/buttons/custom_button.dart';
 import '../../../utils/widgets/custom_text.dart';
 import '../../../utils/widgets/custom_textfield.dart';
 
@@ -20,7 +22,7 @@ class _LogInScreenState extends State<LogInScreen> {
 
 
 TextEditingController passwordController = new TextEditingController();
-    TextEditingController emailController = new TextEditingController();
+TextEditingController emailController = new TextEditingController();
 
 
 
@@ -170,7 +172,9 @@ TextEditingController passwordController = new TextEditingController();
                         child: CustomButton(
                           title: "SUBMIT",
                           color: PTheme.buttonTextBlack,
-                          onTap: () {},
+                          onTap: () {
+                           
+                          },
                           radius: PTheme.buttonShape,
                           primary: PTheme.buttonPrimary,
                         ),
@@ -181,7 +185,7 @@ TextEditingController passwordController = new TextEditingController();
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          width < 1050 ? SignBefore() : SignAfter(),
+                          width < 1050 ? SignBefore(context) : SignAfter(context),
                           SizedBox(
                             height: 20,
                           ),

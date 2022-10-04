@@ -6,13 +6,13 @@ class CustomTextfield extends StatelessWidget {
     required this.obscureText,
     required this.readOnly,
     required this.controller,
-    this.suffix,
+    this.suffixIcon,
     this.color,
     
   }) : super(key: key);
 final bool obscureText;
 final bool readOnly;
-Widget?suffix;
+Widget?suffixIcon;
 Color? color;
 TextEditingController controller;
   @override
@@ -22,7 +22,7 @@ TextEditingController controller;
       obscureText:obscureText ,
       readOnly:readOnly ,
      decoration:InputDecoration(
-      suffix:suffix ,
+      suffixIcon:suffixIcon,
       iconColor:color ,
        
        enabledBorder: OutlineInputBorder(

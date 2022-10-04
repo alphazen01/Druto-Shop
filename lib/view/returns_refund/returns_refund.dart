@@ -1,6 +1,8 @@
-import 'package:druto/utils/constant/theme.dart';
-import 'package:druto/utils/widgets/custom_text.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../utils/constant/theme.dart';
+import '../../utils/widgets/custom_text.dart';
 
 
 class ReturnsRefundScreen extends StatelessWidget {

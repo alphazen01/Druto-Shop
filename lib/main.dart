@@ -1,10 +1,5 @@
 
-
-import 'package:druto/view/cart/cart_screen.dart';
-import 'package:druto/view/home/home.dart';
-import 'package:druto/view/privacry_policy/privacy_policy.dart';
-import 'package:druto/view/returns_refund/returns_refund.dart';
-import 'package:druto/view/terms_condition/terms_condition.dart';
+import 'package:druto/view/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: CartScreen() 
+      home: HomePage() 
     );
   }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../../../view/auth/signup/sign_up.dart';
 import '../../widgets/buttons/text_button.dart';
 import '../../widgets/custom_text.dart';
 import '../theme.dart';
 
-Row SignAfter() {
+Row SignAfter(context) {
   return Row(
     children: [
       CustomText(
@@ -15,14 +16,16 @@ Row SignAfter() {
       CustomTextButton(
         title: "sign now",
         fontSize: 36,
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_)=>SignUpScreen()));
+        },
         color: PTheme.buttonPrimary,
       ),
     ],
   );
 }
 
-Row SignBefore() {
+Row SignBefore(context) {
   return Row(
     children: [
       CustomText(
@@ -32,7 +35,9 @@ Row SignBefore() {
           color: Colors.black),
       CustomTextButton(
         title: "sign now",
-        onTap: () {},
+        onTap: () {
+           Navigator.push(context, MaterialPageRoute(builder: (_)=>SignUpScreen()));
+        },
         color: PTheme.buttonPrimary,
       ),
     ],

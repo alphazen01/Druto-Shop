@@ -16,6 +16,9 @@ static const Color buttonPrimary = Color(0xffFEB716);
 
 static const  buttonShape =5.0 ;
 
+//Todo:Gridview padding//
+
+static const gPaddingX=5.0;
 
 
 
