@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../utils/constant/theme.dart';
 import '../../../utils/widgets/buttons/custom_button.dart';
 import '../../../utils/widgets/custom_text.dart';
-import '../../favourite/favourite_list_item.dart';
+import '../favourite/favourite_list_item.dart';
 
 class FavoriteSection extends StatelessWidget {
   const FavoriteSection({

@@ -1,13 +1,10 @@
-import 'package:druto/view/home/method/popular/popular_list.dart';
-import 'package:druto/view/home/method/product/product_list.dart';
+
 import 'package:druto/view/home/method/trending_deals/trending_list.dart';
 import 'package:flutter/material.dart';
-import 'package:druto/view/home/method/popular/popular_list.dart';
-
 import '../../../../utils/constant/theme.dart';
 import '../../../../utils/widgets/buttons/custom_button.dart';
 import '../../../../utils/widgets/custom_text.dart';
-import '../../../details/details.dart';
+
 
 Container TrendingItem(BuildContext context) {
     return Container(

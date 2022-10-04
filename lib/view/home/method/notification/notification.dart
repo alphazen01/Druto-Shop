@@ -1,13 +1,13 @@
-import 'dart:ui';
+
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-import '../../utils/constant/theme.dart';
-import '../../utils/widgets/custom_text.dart';
-import '../home/widgets/notifiaction_section.dart';
+import '../../../../utils/widgets/custom_text.dart';
+import '../../widgets/notifiaction_section.dart';
+
+
+
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({Key? key}) : super(key: key);

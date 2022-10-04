@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/constant/theme.dart';
 import '../../../utils/widgets/custom_text.dart';
-import '../../message/message.dart';
+import '../method/message/message.dart';
+
 
 class MessageSection extends StatefulWidget {
   const MessageSection({

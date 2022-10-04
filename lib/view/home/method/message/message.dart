@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import '../../../../utils/constant/theme.dart';
+import '../../../../utils/widgets/custom_text.dart';
+import '../../widgets/message_section.dart';
 
-import '../../utils/constant/theme.dart';
-import '../../utils/widgets/custom_text.dart';
-import '../home/widgets/message_section.dart';
+
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({Key? key}) : super(key: key);

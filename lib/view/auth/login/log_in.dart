@@ -1,9 +1,6 @@
 
 
-import 'package:druto/view/auth/signup/sign_up.dart';
 import 'package:flutter/material.dart';
-
-
 import '../../../utils/constant/function/method_divider.dart';
 import '../../../utils/constant/function/sign_after_before.dart';
 import '../../../utils/constant/theme.dart';

@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class OfferSlider extends StatefulWidget {
   const OfferSlider({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class OfferSlider extends StatefulWidget {
 
 class _OfferSliderState extends State<OfferSlider> {
 
-  int _current = 0;
+
 
 List<String>image=[
 "assets/offer_banner.png",
@@ -32,7 +31,7 @@ List<String>image=[
             enlargeCenterPage: false,
             onPageChanged:  (index, reason) {
           setState(() {
-            _current = index;
+
             
           });
         }  

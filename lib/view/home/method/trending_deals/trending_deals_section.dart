@@ -1,11 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:druto/view/home/method/trending_deals/trending_item.dart';
-import 'package:druto/view/home/method/trending_deals/trending_list.dart';
-import 'package:flutter/material.dart';
-import 'package:scroll_indicator/scroll_indicator.dart';
 
+import 'package:druto/view/home/method/trending_deals/trending_item.dart';
+import 'package:flutter/material.dart';
 import '../../../../utils/constant/theme.dart';
-import '../../../../utils/widgets/buttons/custom_button.dart';
 import '../../../../utils/widgets/custom_text.dart';
 
 class TrendingDealsSection extends StatefulWidget {

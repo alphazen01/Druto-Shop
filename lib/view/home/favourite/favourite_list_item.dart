@@ -1,8 +1,8 @@
 import 'package:druto/utils/constant/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../../utils/widgets/custom_text.dart';
 
-import '../../utils/widgets/custom_text.dart';
+
 
 class FavouriteList{
 

@@ -1,14 +1,10 @@
 import 'package:druto/utils/constant/theme.dart';
 import 'package:druto/utils/widgets/custom_text.dart';
-import 'package:druto/view/details/function/details_size.dart';
 import 'package:druto/view/details/function/product_details.dart';
 import 'package:druto/view/details/function/related_list.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 import '../../utils/widgets/buttons/custom_button.dart';
-import '../favourite/favourite_list_item.dart';
+import '../home/favourite/favourite_list_item.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({Key? key}) : super(key: key);

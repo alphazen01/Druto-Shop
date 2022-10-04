@@ -1,48 +1,98 @@
 
+
+
+
+import 'package:druto/view/home/widgets/cart_section.dart';
+import 'package:druto/view/home/widgets/favourite_section.dart';
+import 'package:druto/view/home/widgets/login_section.dart';
+import 'package:druto/view/home/widgets/notifiaction_section.dart';
+import 'package:druto/view/home/widgets/profile_section.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import '../../../utils/constant/theme.dart';
+import '../../../utils/widgets/custom_text.dart';
+import '../custom_drawer/custom_drawer.dart';
+import 'home_section.dart';
 
-import '../../utils/constant/theme.dart';
-import '../../utils/widgets/custom_text.dart';
-import '../auth/login/log_in.dart';
-import '../auth/signup/sign_up.dart';
-import '../privacry_policy/privacy_policy.dart';
-import '../profile/profile_screen.dart';
-import '../returns_refund/returns_refund.dart';
-import '../terms_condition/terms_condition.dart';
+import '../widgets/message_section.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
 
-
+class _HomePageState extends State<HomePage> {
 
 int selectedIndex=0;
 
 
+bool tap = false;
+bool loading = false;
+
+
 
 
   @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        drawer: Drawer(),
-        body: Column(
-          children: [
-          CustomAppBar(context),
-          ],
-        ),
+  Widget build(BuildContext context,  ) {
+    return Scaffold(
+      drawer: Drawer(
+        child:CustomDrawer()
       ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              CustomAppBar(context),
+              tap==false? 
+             HomeSection(context):SizedBox(),
+              
+             tap==true? selectedIndex==1?Stack(
+                children: [
+                 HomeSection(context),
+                  Positioned(
+                    top: 20,
+                    right: 10,
+                    child: 
+                    MessageSection()
+                  
+      
+                  ),
+                ],
+              ):SizedBox():SizedBox(),
+              tap==true? selectedIndex==2?
+              Stack(
+                children: [
+                  HomeSection(context),
+                  Positioned(
+                    top: 20,
+                    right: 5,
+                    child: 
+                    NotificationSection()
+                  ),
+                ],
+              ):SizedBox():SizedBox(),
+              tap==true? selectedIndex==3?FavoriteSection()
+              :SizedBox():SizedBox(),
+              tap==true? selectedIndex==4?CartSection()
+              :SizedBox():SizedBox(),
+              tap==true? selectedIndex==5?ProfileSection()
+              :SizedBox():SizedBox(),
+               tap==true? selectedIndex==6?LoginSection()
+              :SizedBox():SizedBox()
+               
+              
+            ],
+          ),
+        ),
+          
+        
+      
     );
   }
+ 
 
-  Row CustomAppBar(BuildContext context) {
+Row CustomAppBar(BuildContext context) {
     return 
      Row(
     children: [
@@ -71,11 +121,22 @@ int selectedIndex=0;
                 Column(
 
               children: [
-              CustomText(
-              title: "Druto Shop",
-              fontSize: 26,
-              fontWeight: FontWeight.w700,
-              color: PTheme.buttonPrimary),
+              InkWell(
+                onTap: (){
+                   setState(() {
+                    
+                  });
+                  tap=false;
+                  
+                  
+                  
+                },
+                child: CustomText(
+                title: "Druto Shop",
+                fontSize: 26,
+                fontWeight: FontWeight.w700,
+                color: PTheme.buttonPrimary),
+              ),
               CustomText(
               title:
               "E    N    J    O    Y    Y    O    U    R    S    H    O    P    P    I    N    G",
@@ -128,9 +189,10 @@ int selectedIndex=0;
                         return Row(
                           children: [
                             Material(
-                              color: selectedIndex==index?PTheme.buttonPrimary:Colors.white,
+                              color:tap==true? selectedIndex==index?PTheme.buttonPrimary:Colors.white:Colors.white,
                               child:InkWell(
                                 onTap: (){
+                                  tap=true;
                                   setState(() {
                                   selectedIndex=index;
                                   });
@@ -174,8 +236,8 @@ Widget? screen;
 
 }
 List<HomeAppBar>homeAppBarItem = [
-  HomeAppBar(
-  icon:Icon(Icons.home),
+   HomeAppBar(
+  icon:SizedBox(),
   // screen: ProfileScreen()
   ),
   HomeAppBar(

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/constant/theme.dart';
 import '../../../utils/widgets/custom_text.dart';
-import '../../notification/notification.dart';
+import '../method/notification/notification.dart';
+
 
 class NotificationSection extends StatefulWidget {
   const NotificationSection({

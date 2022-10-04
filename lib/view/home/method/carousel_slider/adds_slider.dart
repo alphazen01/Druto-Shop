@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class AddsSlider extends StatefulWidget {
   const AddsSlider({Key? key}) : super(key: key);
@@ -11,7 +10,7 @@ class AddsSlider extends StatefulWidget {
 }
 
 class _AddsSliderState extends State<AddsSlider> {
- int _current = 0;
+
 
 List<String>image=[
 "assets/adds.png",
@@ -31,7 +30,7 @@ List<String>image=[
             enlargeCenterPage: false,
             onPageChanged:  (index, reason) {
           setState(() {
-            _current = index;
+
           
           });
         }  

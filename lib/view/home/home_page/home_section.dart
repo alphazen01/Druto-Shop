@@ -5,15 +5,9 @@ import 'package:druto/view/home/method/product/products_section.dart';
 import 'package:druto/view/home/method/trending_deals/trending_deals_section.dart';
 import 'package:druto/view/home/method/carousel_slider/adds_slider.dart';
 import 'package:flutter/material.dart';
-
-import '../../../utils/constant/theme.dart';
-import '../../../utils/widgets/custom_text.dart';
 import '../method/carousel_slider/custom_carousel.dart';
 import '../method/carousel_slider/offer_slider.dart';
-import '../method/exclusive_offer/exclusive_item.dart';
-import '../method/popular/popular_item.dart';
-import '../method/product/product_item.dart';
-import '../method/trending_deals/trending_item.dart';
+
 
 Column HomeSection(BuildContext context) {
   return Column(

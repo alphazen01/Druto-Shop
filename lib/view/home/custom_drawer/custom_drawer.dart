@@ -1,13 +1,11 @@
 import 'package:druto/utils/constant/theme.dart';
 import 'package:druto/view/contact/contact_screen.dart';
-import 'package:druto/view/message/message.dart';
 import 'package:druto/view/privacry_policy/privacy_policy.dart';
 import 'package:druto/view/profile/profile_screen.dart';
 import 'package:druto/view/returns_refund/returns_refund.dart';
 import 'package:druto/view/terms_condition/terms_condition.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key? key}) : super(key: key);

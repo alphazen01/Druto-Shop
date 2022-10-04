@@ -1,5 +1,5 @@
 
-import 'package:druto/view/home/home_page.dart';
+import 'package:druto/view/home/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
